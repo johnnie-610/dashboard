@@ -1,0 +1,99 @@
+:root {
+    --sidebar-width: 25vw;
+    --sidebar-bg-color: #2196f3;
+    --sidebar-text-color: #fff;
+    --main-bg-color: #f4f4f4;
+    --main-alt-bg-color: #e0e0e0;
+    --main-text-color: #000;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--main-bg-color);
+    color: var(--main-text-color);
+}
+
+.container {
+    display: grid;
+    grid-template-columns: var(--sidebar-width) 1fr;
+}
+
+.sidebar {
+    background-color: var(--sidebar-bg-color);
+    color: var(--sidebar-text-color);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-y: auto;
+    z-index: 1000;
+    transition: width 0.3s ease;
+
+}
+
+.sidebar img {
+    width: 25px;
+    height: 25px;
+    align-self: center;
+}
+
+
+.header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.header img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    align-self: center;
+}
+
+.header p {
+    font-size: 30px;
+
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: var(--sidebar-text-color);
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 5px;
+    align-self: center;
+    justify-self: center;
+    transition: background-color 0.3s ease;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.web-links {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+
+.actions {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.account-actions {
+    display: flex;
+    gap: 3px;
+    align-items: center;
+}
